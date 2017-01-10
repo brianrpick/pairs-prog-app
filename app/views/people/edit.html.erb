@@ -1,0 +1,32 @@
+<h1>edit person</h1>
+<div>
+<%= form_tag "/people/#{:id}", method: :patch do%>
+  <div>
+    <%= label_tag :first_name, "first name"%>:
+    <%= text_field_tag :first_name, @person.first_name%>
+  </div>
+  <div>
+    <%= label_tag :last_name, "last name"%>:
+    <%= text_field_tag :last_name, @person.last_name%>
+  </div>
+  <div>
+    <%= label_tag :age, "age"%>:
+    <%= text_field_tag :age, @person.age %>
+  </div>
+  <div>
+    <%= label_tag :wage, "wage"%>:
+    <%= text_field_tag :wage, @person.wage %>
+  </div>
+  <div>
+    <%= label_tag :address, "address"%>:
+    <%= text_field_tag :address, @person.address %>
+  </div>
+  <div>
+    <%= label_tag :title, "title"%>:
+    <%= text_field_tag :title, @person.title %>
+  </div>
+  <div>
+    <%= submit_tag "Submit" %>
+  </div>
+</div>
+<%end%>
